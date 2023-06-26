@@ -1,0 +1,46 @@
+group	template	region
+E18-0049	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E18-0593	config/trio_neutral_scenario.yaml	
+E18-0667		
+E18-0937	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E18-1200	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0144	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0145	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0148	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0201	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0202	config/scenario/mother_son.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0204	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0742	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0805	config/scenario/mother_son.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0820	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-0901	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-1002		
+E19-1058	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E19-1141	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0042	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0172	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0190	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0198	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0232	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0348	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0487	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-0773	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E20-1022	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E21-0556	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E21-0870	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E21-0931	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E21-1097	config/scenario/mother_son.yaml	config/gencode.v42.genes.extended1000.bed
+E21-1140	config/trio_neutral_scenario.yaml	
+E21-1141	config/trio_neutral_scenario.yaml	
+E22-0035	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0284	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0310	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0348	config/scenario/mother_son.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0396	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0415	config/scenario/mother_son.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0431	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0438	config/scenario/mother_son.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0477	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0524	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+E22-0525	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
+unknown	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed

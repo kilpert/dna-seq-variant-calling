@@ -1,0 +1,46 @@
+species:
+  genome-size: 3.5e9
+  germline-mutation-rate: 1.2e-08
+  heterozygosity: 0.001
+  ploidy:
+    male:
+      all: 2
+      X: 1
+      Y: 1
+    female:
+      all: 2
+      X: 2
+      Y: 0
+    neutral:
+      all: 2
+samples:
+  index:
+    sex: neutral
+    inheritance:
+      mendelian:
+        from:
+        - mother
+        - father
+    contamination:
+      by: conta
+      fraction: 0.1
+  mother:
+    sex: female
+    contamination:
+      by: conta
+      fraction: 0.1
+  father:
+    sex: male
+    contamination:
+      by: conta
+      fraction: 0.1
+  conta:
+    sex: neutral
+events:
+  denovo: (index:0.5 | index:1.0) & father:0.0 & mother:0.0
+  half_denovo: index:1.0 & (father:0.5 | mother:0.5) & (father:0.0 | mother:0.0)
+  rezessive_homozygous: index:1.0 & father:0.5 & mother:0.5
+  pos_ch_mother_strong: index:0.5 & father:0.0 & mother:0.5
+  pos_ch_father_strong: index:0.5 & father:0.5 & mother:0.0
+  pos_ch_weak: index:0.5 & father:0.5 & mother:0.5
+  not_interesting: index:0.0 | father:1.0 | mother:1.0

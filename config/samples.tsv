@@ -1,0 +1,15 @@
+sample_name	alias	group	platform	purity
+CMT-01	affected	afrentoae	ILLUMINA	NA
+CMT-03	dad	afrentoae	ILLUMINA	NA
+CMT-04	mum	afrentoae	ILLUMINA	NA
+CMT-05	affected	badoizel	ILLUMINA	NA
+CMT-06	mum	badoizel	ILLUMINA	NA
+CMT-07	affected	badoizel	ILLUMINA	NA
+CMT-10	healthy	badoizel	ILLUMINA	NA
+CMT-13	dad	guyader	ILLUMINA	NA
+CMT-14	mum	WIEST	ILLUMINA	NA
+CMT-15	affected	guyader	ILLUMINA	NA
+CMT-16	dad	malefant	ILLUMINA	NA
+CMT-17	mum	duhem	ILLUMINA	NA
+CMT-18	affected	malefant duhem	ILLUMINA	NA
+CMT-19	affected	stas	ILLUMINA	NA

@@ -1,0 +1,38 @@
+species:
+  genome-size: 3.5e9
+  germline-mutation-rate: 1.2e-08
+  heterozygosity: 0.001
+  ploidy:
+    male:
+      all: 2
+      X: 1
+      Y: 1
+    female:
+      all: 2
+      X: 2
+      Y: 0
+    neutral:
+      all: 2
+samples:
+  index:
+    sex: female
+    inheritance:
+      mendelian:
+        from:
+        - mother
+        - father
+    contamination:
+      by: conta
+      fraction: 0.1
+  mother:
+    sex: female
+    contamination:
+      by: conta
+      fraction: 0.1
+  conta:
+    sex: neutral
+events:
+  only_index: (index:0.5 | index:1.0) & mother:0.0
+  only_mother: (mother:0.5 | mother:1.0) & index:0.0
+  index_and_mother: (index:0.5 | index:1.0) & (mother:0.5 | mother:1.0)
+  not_interesting: index:0.0 & mother:0.0

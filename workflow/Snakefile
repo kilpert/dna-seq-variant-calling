@@ -1,0 +1,27 @@
+configfile: "config/config.yaml"
+
+include: "rules/common.smk"
+include: "rules/ref.smk"
+include: "rules/annotation.smk"
+include: "rules/mapping.smk"
+include: "rules/trimming.smk"
+include: "rules/calling.smk"
+include: "rules/filtering.smk"
+include: "rules/visualization.smk"
+
+#print(" ".join(expand("../sgt/dna-seq-strelka/results/calls/{group}/results/variants/variants.norm.bcf", group=groups)))
+
+rule all:
+    input:
+        expand("results/calls/{group}.norm.bcf", group=groups),
+        expand("results/tables/{group}.maf.0.01.tsv", group=groups)
+        #expand("results/calls/{group}/results/variants/variants.snpsift.bcf", group=groups),
+        #expand("results/calls/{group}/results/variants/variants.norm.bcf", group=groups)
+
+rule only_mapping:
+    input:
+        expand("results/alignment/{sample}.{ending}", sample=samples.sample_name, ending=["cram", "cram.crai", "crai"]) 
+
+rule only_structural_calling:
+    input:
+        expand("results/sv_calls/{group}.bcf", group=groups) 

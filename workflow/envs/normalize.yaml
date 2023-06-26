@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - snpsift =4.3.1
+  - bcftools =1.15
+  - vt =2015.11.10
+  - vcftools =0.1.16
+  - vcflib =1.0.3
+  - vembrane =0.8

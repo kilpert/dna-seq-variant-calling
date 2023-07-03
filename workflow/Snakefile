@@ -8,19 +8,26 @@ include: "rules/trimming.smk"
 include: "rules/calling.smk"
 include: "rules/filtering.smk"
 include: "rules/visualization.smk"
+include: "rules/qc.smk"
 
 #print(" ".join(expand("../sgt/dna-seq-strelka/results/calls/{group}/results/variants/variants.norm.bcf", group=groups)))
 
 rule all:
     input:
-        expand("results/calls/{group}.norm.bcf", group=groups),
-        expand("results/tables/{group}.maf.0.01.tsv", group=groups)
+        "results/qc/multiqc.html",
+        # expand("results/calls/{group}.norm.bcf", group=groups),
+        # expand("results/calls/{group}.vcf.gz", group=groups),
+        expand("results/tables/{group}.maf.0.01.tsv", group=groups),
         #expand("results/calls/{group}/results/variants/variants.snpsift.bcf", group=groups),
         #expand("results/calls/{group}/results/variants/variants.norm.bcf", group=groups)
 
 rule only_mapping:
     input:
         expand("results/alignment/{sample}.{ending}", sample=samples.sample_name, ending=["cram", "cram.crai", "crai"]) 
+
+rule test:
+    input:
+        expand("results/tables/{group}.maf.0.01.tsv", group=groups),
 
 rule only_structural_calling:
     input:

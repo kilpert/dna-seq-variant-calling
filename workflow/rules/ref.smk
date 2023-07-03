@@ -2,7 +2,9 @@ rule get_genome:
     output:
         genome,
     log:
-        "logs/get-genome.log",
+        "logs/get-genome.log"
+    # benchmark:
+    #     "benchmarks/get-genome.log",
     params:
         species=config["ref"]["species"],
         datatype="dna",
@@ -10,6 +12,8 @@ rule get_genome:
         release=config["ref"]["release"],
         chromosome=config["ref"].get("chromosome"),
     cache: "omit-software"
+    resources:
+        mem_mb=1024
     wrapper:
         "v1.2.0/bio/reference/ensembl-sequence"
 
@@ -20,8 +24,12 @@ rule genome_faidx:
     output:
         genome_fai,
     log:
-        "logs/genome-faidx.log",
+        "logs/genome-faidx.log"
+    # benchmark:
+    #     "benchmarks/genome-faidx.log"
     cache: "omit-software"
+    resources:
+        mem_mb=1024
     wrapper:
         "v1.10.0/bio/samtools/faidx"
 
@@ -32,10 +40,14 @@ rule genome_dict:
     output:
         genome_dict,
     log:
-        "logs/samtools/create_dict.log",
+        "logs/samtools/create_dict.log"
+    # benchmark:
+    #     "benchmarks/samtools/create_dict.log"
     conda:
         "../envs/samtools.yaml"
     cache: "omit-software"
+    resources:
+        mem_mb=1024
     shell:
         "samtools dict {input} > {output} 2> {log} "
 
@@ -48,7 +60,11 @@ rule get_vep_cache:
         build=config["ref"]["build"],
         release=config["ref"]["release"],
     log:
-        "logs/vep/cache.log",
+        "logs/vep/cache.log"
+    benchmark:
+        "benchmarks/vep/cache.log",
+    resources:
+        mem_mb=1024
     wrapper:
         "v1.24.0/bio/vep/cache"
 
@@ -60,6 +76,10 @@ rule get_vep_plugins:
         release=config["ref"]["release"],
     log:
         "logs/vep/plugins.log",
+    benchmark:
+        "benchmarks/vep/plugins.log",
+    resources:
+        mem_mb=1024
     wrapper:
         "v1.24.0/bio/vep/plugins"
 
@@ -173,9 +193,13 @@ rule bwa_index:
         ),
     log:
         f"logs/bwa-mem2_index/{genome}.log",
+    benchmark:
+        f"benchmarks/bwa-mem2_index/{genome}.log"
     params:
         bwa="bwa-mem2",
     cache: True
     threads: 64
+    resources:
+        mem_mb=10000
     wrapper:
         "v1.25.0/bio/bwa-memx/index"

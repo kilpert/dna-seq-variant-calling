@@ -34,7 +34,7 @@ genome_prefix = f"results/resources/{genome_name}"
 genome = f"{genome_prefix}.fasta"
 genome_fai = f"{genome}.fai"
 genome_dict = f"{genome_prefix}.dict"
-target = config.get("target", "genome")
+target = config.get("target", None)
 
 wildcard_constraints:
     group="|".join(groups),

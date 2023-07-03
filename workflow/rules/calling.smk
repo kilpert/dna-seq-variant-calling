@@ -13,6 +13,10 @@ rule call:
         rm_existing=True,
     log:
         "logs/strelka/{group}.log"
+    benchmark:
+        "benchmarks/strelka/{group}.txt"
+    resources:
+        mem_mb=20000
     threads:
         61
     wrapper:
@@ -25,6 +29,8 @@ rule touch_gvcf:
         lambda wc: f"results/calls/{get_group(wc.sample)}.vcf.gz"
     output:
         "results/gvcf/{sample}.vcf.gz"
+    resources:
+        mem_mb=128
     shell:
         "touch {output}"
 
@@ -44,10 +50,12 @@ rule structural_call:
         cand_sv_idx="results/sv_calls/{group}.cand_sv.vcf.gz.tbi",
     # params:
     #     extra_cfg="--config config/manta.ini",  # optional
-    benchmark:
-        "benchmarks/manta/{group}.tsv"
     log:
         "logs/manta/{group}.log",
+    benchmark:
+        "benchmarks/manta/{group}.txt"
+    resources:
+        mem_mb=20000
     threads:
         61
     wrapper:

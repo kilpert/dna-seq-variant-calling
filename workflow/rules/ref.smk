@@ -193,8 +193,6 @@ rule bwa_index:
         ),
     log:
         f"logs/bwa-mem2_index/{genome}.log",
-    benchmark:
-        f"benchmarks/bwa-mem2_index/{genome}.log"
     params:
         bwa="bwa-mem2",
     cache: True

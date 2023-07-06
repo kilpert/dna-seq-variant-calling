@@ -59,7 +59,7 @@ rule qualimap:
     threads:
         4
     resources:
-        mem_mb=10000,
+        mem_gb=10,
     wrapper:
         "file:///projects/humgen/user-projects/cschroeder/snakemake-wrappers/bio/qualimap/bamqc"
 
@@ -105,7 +105,7 @@ rule multiqc_dir:
         expand("results/qc/samtools_stats/{sample}.txt", sample=samples.sample_name),
         expand("results/qc/samtools_idxstats/{sample}.idxstats", sample=samples.sample_name),
         expand("results/calls/{group}.vep.html", group=groups),
-        expand("logs/bwa_meme/{sample}.log", sample=samples.sample_name),
+        # expand("logs/bwa_meme/{sample}.log", sample=samples.sample_name),
     output:
         "results/qc/multiqc.html"
     params:

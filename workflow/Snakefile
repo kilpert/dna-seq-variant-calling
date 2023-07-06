@@ -18,7 +18,7 @@ rule all:
         # expand("results/calls/{group}.norm.bcf", group=groups),
         # expand("results/calls/{group}.vcf.gz", group=groups),
         expand("results/tables/{group}.maf.0.01.tsv", group=groups),
-        #expand("results/calls/{group}/results/variants/variants.snpsift.bcf", group=groups),
+        expand("results/calls_sv/{group}.bcf", group=groups),
         #expand("results/calls/{group}/results/variants/variants.norm.bcf", group=groups)
 
 rule only_mapping:
@@ -28,6 +28,7 @@ rule only_mapping:
 rule test:
     input:
         expand("results/tables/{group}.maf.0.01.tsv", group=groups),
+        expand("results/calls_sv/{group}.bcf", group=groups)
 
 rule only_structural_calling:
     input:

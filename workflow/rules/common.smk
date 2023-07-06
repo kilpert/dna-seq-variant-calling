@@ -24,6 +24,7 @@ units = (
 )
 
 groups = samples["group"].unique()
+print(groups)
 
 datatype = "dna"
 species = config["ref"]["species"]

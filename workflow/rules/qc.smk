@@ -59,7 +59,8 @@ rule qualimap:
     threads:
         4
     resources:
-        mem_mb=10000,
+        ##mem_mb=10000,
+        mem_gb=10,
     wrapper:
         "file:///projects/humgen/user-projects/cschroeder/snakemake-wrappers/bio/qualimap/bamqc"
 

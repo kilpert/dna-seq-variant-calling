@@ -79,7 +79,7 @@ rule gatk_applybqsr_spark:
     benchmark:
         "benchmarks/gatk_applybqsr_spark/{sample}.txt"
     resources:
-        mem_mb=50000,
+        mem_mb=90000,
     threads: 32
     wrapper:
         "v2.0.0/bio/gatk/applybqsrspark"

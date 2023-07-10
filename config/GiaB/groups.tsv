@@ -1,0 +1,2 @@
+group	template	region
+singleton	config/scenario/singleton.yaml	config/gencode.v42.genes.extended1000.bed
